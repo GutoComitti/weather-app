@@ -1,0 +1,56 @@
+<app-header [isDetail]="true"></app-header>
+
+	<div id="weatherInRow" *ngIf="isDataFetched">
+		Weather in {{ currentWeather.name | uppercase }}, {{ currentWeather.sys.country | uppercase }}
+	</div>
+	<div id="weatherInRowSubtitle" *ngIf="isDataFetched">
+		{{ convertUtcDateToSubtitleString(currentWeather.dt) }} 
+	</div>
+<div class="container" id="weatherContainer" *ngIf="isDataFetched">
+	<div class="row" id="currentWeatherContainer">
+		<div class="col-4 m-0 p-0 text-center" id="currentWeatherCard">
+			<div id="currentTemp">{{ currentWeather.main.temp }}ºC</div>
+			<div id="currentWeather" *ngIf="currentWeather.weather.length > 0">
+				<img src="https://openweathermap.org/img/w/{{ currentWeather.weather[0].icon }}.png">
+				<br>{{ currentWeather.weather[0].description }}</div>
+		</div>
+		<div class="col-8" id="currentWeatherDataContainer">
+			<div class="row">
+					<div class="col-4 currentWeatherDataDes">Máx</div>
+					<div class="col-8 maxTemp">{{ currentWeather.main.temp_max }} ºC</div>
+			</div>
+			<hr>
+			<div class="row">
+					<div class="col-4 currentWeatherDataDes">Mín</div>
+					<div class="col-8 minTemp">{{ currentWeather.main.temp_min }} ºC</div>
+			</div>
+			<hr>
+			<div class="row">
+					<div class="col-4 currentWeatherDataDes">Sunrise</div>
+					<div class="col-8" id="sunriseTime">{{ convertUtcDateToHourString(currentWeather.sys.sunrise) }}</div>
+			</div>
+			<hr>
+			<div class="row">
+					<div class="col-4 currentWeatherDataDes">Sunset</div>
+					<div class="col-8" id="sunsetTime">{{ convertUtcDateToHourString(currentWeather.sys.sunset) }}</div>
+			</div>
+			<hr>
+		</div>
+	</div>
+	<div class="row" id="weatherForecastHeaderWrapper">
+		<span id="weatherForecastHeader">5 day weather forecast</span>
+		<span id="intervalText">every 3 hours</span>
+	</div>
+
+		<div class="row forecastWrapper text-center" *ngFor="let forecast of weatherForecasts">
+			<div class="col-3 forecastDate">
+				<div class="row forecastDay">{{ convertUtcDateToDateString(forecast.dt) }}</div>
+				<div class="row forecastTime">{{ convertUtcDateToHourString(forecast.dt) }}</div>
+			</div>
+			<div class="col-3 forecastWeather" *ngIf="forecast.weather.length > 0"><img src="https://openweathermap.org/img/w/{{forecast.weather[0].icon}}.png"> {{ forecast.weather[0].description }}</div>
+			<div class="col-6">
+				<span class="forecastMax maxTemp">{{ forecast.main.temp_max }}ºC</span>
+				<span class="forecastMin minTemp">{{ forecast.main.temp_min }}ºC</span>
+			</div>
+		</div>
+</div>

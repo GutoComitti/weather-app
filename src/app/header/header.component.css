@@ -1,0 +1,36 @@
+.weatherInYourCity{
+  height: 24px;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;  
+  margin: 88px auto 16px auto;
+}
+
+.standardHeaderContainer{
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  background-color: #39a3db;
+  text-align: center;
+}
+
+.detailHeaderContainer{
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  background-color: #39a3db;
+  text-align: center;
+}
+
+.return-arrow{
+  position: absolute;
+  font-size: 1.5rem;
+  top: 10px;
+  left: 24px;
+}

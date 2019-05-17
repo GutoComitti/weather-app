@@ -1,0 +1,5 @@
+<div [ngClass]="{detailHeaderContainer: isDetail, standardHeaderContainer: !isDetail}">
+	<i class="ion-arrow-left-c return-arrow" *ngIf="isDetail" (click)="onBack()"></i>
+	<p class="weatherInYourCity" *ngIf="!isDetail">WEATHER IN YOUR CITY</p>
+	<app-search-bar [isDetail]="isDetail"></app-search-bar>
+</div>

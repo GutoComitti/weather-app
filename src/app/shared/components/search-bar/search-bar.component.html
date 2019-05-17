@@ -1,0 +1,4 @@
+<div id="inputContainer" [ngClass]="{detailSearch: isDetail, standardSearch: !isDetail}">
+	<input type="text" id="textInput" placeholder="Your city name" (keydown)="onKeydown($event)" #searchInput >
+	<i class="ion-android-search" id="searchIcon" (click)="onSearch()"></i>
+</div>

@@ -1,0 +1,28 @@
+.standardSearch {
+    position: relative;
+    width: 420px;
+    height: 40px;
+    margin: 0 auto 124px auto;
+}
+
+.detailSearch {
+    position: relative;
+    width: 420px;
+    height: 40px;
+    margin: 40px auto 0 auto;
+}
+
+#textInput {
+    margin: 0;
+    padding: 10px 16px 10px 16px;
+    width: 100%;
+    border-radius: 10px;
+    font-family: Roboto-Regular;
+}
+
+#searchIcon {
+    color: #39a3db;
+    position: absolute;
+    right: 16px;
+    font-size: 2rem;
+}

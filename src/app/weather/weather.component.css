@@ -1,0 +1,108 @@
+#weatherContainer{
+	width: 60%;
+	background: white;
+	position: absolute;
+	top: 258px;
+	margin-left: 20%;
+	padding: 40px;
+}
+
+#weatherInRow{
+	position: absolute;
+	top: 160px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	font-size: 36px;
+	width: 453px;
+
+}
+#weatherInRowSubtitle{
+	position: absolute;	
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 210px;
+	opacity: 0.5;
+	font-size: 14px;
+	color: #3c3c3c;
+	max-width: 90px;
+}
+
+#currentWeatherContainer{
+	height: 208px;
+}
+
+#currentWeatherCard{
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+}
+
+#currentTemp{
+	opacity: 0.75;
+  font-family: Roboto;
+  font-size: 48px;
+  font-weight: bold;
+	color: #3c3c3c;
+	background: #f0f0f0;
+	height: 50%;
+	line-height: 8rem;
+}
+
+#currentWeather{
+	height: 50%;
+}
+
+.row span:nth-of-type(2):not(#intervalText) {
+	margin-left: auto;
+}
+
+#intervalText{
+	margin: 0.9rem 0 1rem 1.5rem;
+	font-family: Roboto;
+  font-weight: normal;
+  font-style: italic;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3c3c3c;
+}
+
+#weatherForecastHeaderWrapper{
+	margin: 1rem;
+	margin-top: 3rem;
+}
+
+#weatherForecastHeader{
+	font-size: 1.5rem;
+}
+
+.forecastWrapper:hover{
+	background: #f0f0f0;
+	border-left: 10px solid #39a3db;
+}
+
+.currentWeatherDataDes{
+	font-weight: 700;
+}
+
+.maxTemp{
+	font-weight: 600;
+	color: #b30000;
+}
+.minTemp{
+	font-weight: 600;
+	color: #4a90e2;
+}
+.forecastMax{
+	margin-right: 2rem;
+}
+.forecastDay{
+	font-weight: 700;
+	margin-left: 2rem;
+	margin-top: 1rem;
+}
+.forecastTime{
+	margin-left: 2rem;
+	margin-bottom: 1rem;
+}
